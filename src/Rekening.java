@@ -30,16 +30,6 @@ public abstract class Rekening {
         return true;
     }
 
-    // KONTRAK: true kalau berhasil, false kalau gagal.
-    // Tidak pernah melempar exception.
-    public boolean tarik(int jumlah) {
-        if (jumlah <= 0 || jumlah > saldo) {
-            return false;
-        }
-        saldo -= jumlah;
-        return true;
-    }
-
     public int potongBiayaAdmin() {
         int biaya = biayaAdminBulanan();
         saldo -= biaya;

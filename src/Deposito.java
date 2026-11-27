@@ -1,4 +1,3 @@
-// ===== Deposito.java =====
 public class Deposito extends Rekening implements BerBunga {
     private double bungaPersen;
 
@@ -17,12 +16,6 @@ public class Deposito extends Rekening implements BerBunga {
         int bunga = (int) (saldo * bungaPersen / 100);
         setor(bunga);
         return bunga;
-    }
-
-    // Belum jatuh tempo: penarikan selalu gagal (false, bukan exception)
-    @Override
-    public boolean tarik(int jumlah) {
-        return false;
     }
 
     @Override
